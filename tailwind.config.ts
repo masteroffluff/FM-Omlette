@@ -9,8 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "background": "var(--background)",
+        "card-background": "var(--card-background)",
+        "foreground": "var(--foreground)",
+        "body-text": "var(--body-text)",
+        "title-text":"var(--title-text)",
+        "heading-text":"var(--heading-text)",
+        "prepcard-title":"var(--prepcard-title)",
+        "precard-background":"var(--precard-background)"
       },
     },
   },

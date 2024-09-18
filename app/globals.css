@@ -3,21 +3,43 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #f3e5d8;
+  --card-background: #ffffff;
   --foreground: #171717;
+  --body-text: #605b56;
+  --title-text:#111111;
+  --heading-text:#88411d;
+  --prepcard-title:#73104b;
+  --precard-background:#fff7fc;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  color: var(--foreground);
+  color: var(--body-text);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--outfit), Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: var(--young-serif), serif;
+  color: var(--title-text);
+  font-size: 2em;
+}
+h2 {
+  font-family: var(--young-serif), serif;
+  color: var(--heading-text);
+  font-size: 1.5em;
+  padding-bottom: 10px;
+}
+h4 {
+  font-weight:800;
+  font-size: 1.1em;
 }
 
 @layer utilities {

@@ -2,100 +2,96 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="grid xl:grid-cols-[2fr_5fr_2fr] items-center justify-items-center min-h-screen p-0 sm:p-20 text-body-text">
+      <main className="flex flex-col xl:col-start-2 items-center sm:items-start bg-white sm:rounded-2xl p-10">
         <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/images/image-omelette.jpeg"
+          alt="Omelette"
+          className="w-full sm:rounded-2xl mb-5"
+          width={500}
+          height={500}
           priority
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        <h1 className="mb-2">Simple Omelette Recipe</h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <p className="mb-2">
+          An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
+          to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+        </p>
+
+
+        <div className="bg-precard-background p-5 rounded-20 rounded-2xl w-full my-5">
+          <h4 className="text-prepcard-title pb-2">Preparation time</h4>
+          <ul className="list-disc list-inside marker:text-prepcard-title marker:font-thin">
+            <li className="pb-1"><strong>Total:</strong> Approximately 10 minutes</li>
+            <li className="pb-1"><strong>Preparation:</strong> 5 minutes</li>
+            <li className="pb-1"><strong>Cooking:</strong> 5 minutes</li>
+          </ul>
+        </div>
+
+        <div className="border-solid border-b border-slate-200 pb-5 mb-5 w-full">
+          <h2>Ingredients</h2>
+          <ul className="list-disc pl-5 marker:text-heading-text">
+            <li className="pb-1">2-3 large eggs</li>
+            <li className="pb-1">Salt, to taste</li>
+            <li className="pb-1">Pepper, to taste</li>
+            <li className="pb-1">1 tablespoon of butter or oil</li>
+            <li className="pb-1">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+          </ul>
+        </div>
+
+        <div className="border-solid border-b border-slate-200 pb-5 mb-5 w-full">
+          <h2>Instructions</h2>
+          <ol className="list-decimal pl-5 marker:text-heading-text">
+            <li>
+              <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well
+              mixed.
+              You can add a tablespoon of water or milk for a fluffier texture.
+            </li>
+            <li><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+            <li>
+              <strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to
+              ensure
+              the eggs evenly coat the surface.
+            </li>
+            <li>
+              <strong>Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly runny in
+              the
+              middle, sprinkle your chosen fillings over one half of the omelette.
+            </li>
+            <li>
+              <strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it over the
+              fillings. Let it cook for another minute, then slide it onto a plate.
+            </li>
+            <li><strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.</li>
+          </ol>
+        </div>
+
+        <div className="w-full">
+          <h2>Nutrition</h2>
+          <p>The table below shows nudivitional values per serving without the additional fillings.</p>
+
+          <div className="w-full grid grid-rows-4">
+            <div className="grid grid-cols-2 py-2 border-solid border-b border-slate-200">
+              <div className="">Calories</div>
+              <div className="text-heading-text font-bold">277kcal</div>
+            </div>
+            <div className="grid grid-cols-2 py-2 border-solid border-b border-slate-200">
+              <div className="">Carbs</div>
+              <div className="text-heading-text font-bold">0g</div>
+            </div>
+            <div className="grid grid-cols-2 py-2 border-solid border-b border-slate-200">
+              <div className="">Protein</div>
+              <div className="text-heading-text font-bold">20g</div>
+            </div>
+            <div className="grid grid-cols-2 py-2">
+              <div className="col-start-1">Fat</div>
+              <div className="text-heading-text font-bold">22g</div>
+            </div>
+          </div>
+
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
